@@ -1,13 +1,23 @@
 pipeline {
-    agent { docker { image 'mcr.microsoft.com/playwright:v1.63.0-jammy'}}
+    agent { docker { image 'mcr.microsoft.com/playwright:v1.63.0-jammy',
+    args '--ipc=host'}}
+    environment {
+        BASE_URL = 'https://demo.playwright.dev/todomvc/'
+        HEADLESS = 'true'
+    }
     stages {
-        stage('e2e-test'){
+        stage('instalar dependencias'){
             steps {
-                sh 'npm typecheck'
-                sh 'npm run test:headed'
-                sh 'npm run test:smoke'
-                sh 'npm run report'
+                sh 'npm ci'
             }
+        }
+        stage('validar typescript'){
+            steps{
+                sh 'npm typecheck'
+            }
+        }
+        stage('ejecutar pruebas bdd'){
+            sh 'npm run test:smoke'
         }
     }
     post {
