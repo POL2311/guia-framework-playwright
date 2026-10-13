@@ -2,39 +2,43 @@ pipeline {
     agent {
         // Puedes usar un contenedor que ya tenga Node y Playwright integrados
         docker {
-            image 'mcr.microsoft.com/playwright:v1.63.0-jammy'
+            image 'mcr.microsoft.com/playwright:v1.40.0-jammy'
             args '--ipc=host'
         }
     }
+    
     environment {
         BASE_URL = 'https://demo.playwright.dev/todomvc/'
         HEADLESS = 'true'
     }
+
     stages {
-        stage('instalar dependencias'){
+        stage('Instalar dependencias') {
             steps {
+                // Instala las dependencias limpias del proyecto
                 sh 'npm ci'
             }
         }
-        stage('validar typescript'){
-            steps{
-                sh 'npm typecheck'
+        
+        stage('Validar TypeScript') {
+            steps {
+                // Valida los tipos antes de generar código o ejecutar
+                sh 'npm run typecheck'
             }
         }
-        stage('ejecutar pruebas bdd'){
-            sh 'npm run test:smoke'
+        
+        stage('Ejecutar Pruebas BDD') {
+            steps {
+                // Genera las pruebas BDD y ejecuta Playwright
+                sh 'npm test'
+            }
         }
     }
+    
     post {
         always {
-            publishHTML([
-                reportName: 'Playwright Report',
-                reportDir: 'playwright-report',
-                reportFiles: 'index.html',
-                keepAll: true,
-                alwaysLinkToLastBuild: true,
-                allowMissing: false
-            ])
-         }
+            // Guarda los reportes HTML y Cucumber JSON como artefactos en Jenkins (equivalente al upload-artifact)
+            archiveArtifacts artifacts: 'reports/**, test-results/**', fingerprint: true, allowEmptyArchive: true
+        }
     }
 }
