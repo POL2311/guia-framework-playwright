@@ -1,6 +1,11 @@
 pipeline {
-    agent { docker { image 'mcr.microsoft.com/playwright:v1.63.0-jammy',
-    args '--ipc=host'}}
+    agent {
+        // Puedes usar un contenedor que ya tenga Node y Playwright integrados
+        docker {
+            image 'mcr.microsoft.com/playwright:v1.63.0-jammy'
+            args '--ipc=host'
+        }
+    }
     environment {
         BASE_URL = 'https://demo.playwright.dev/todomvc/'
         HEADLESS = 'true'
