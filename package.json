@@ -1,0 +1,30 @@
+{
+  "name": "prueba-guia",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "main": "index.js",
+"scripts": {
+  "test": "bddgen && playwright test",
+  "test:plain": "playwright test --config=playwright.config.ts",
+  "test:headed": "bddgen && playwright test --headed",
+  "test:ui": "bddgen && playwright test --ui",
+  "test:debug": "bddgen && playwright test --debug",
+  "test:smoke": "bddgen && playwright test --grep @smoke",
+  "typecheck": "tsc --noEmit",
+  "report": "playwright show-report reports/playwright-html"
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^26.6.4",
+    "playwright-bdd": "^9.2.1",
+    "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.6"
+  }
+}

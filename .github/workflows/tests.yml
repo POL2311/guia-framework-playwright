@@ -1,0 +1,26 @@
+name: BDD tests
+on: [push, pull_request]
+jobs: 
+  test:
+    runs-on: ubuntu-latest
+    step: 
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: '24'
+        cache: npm
+    - run: npm ci
+    - run: npx playwright install --with-deps chromium
+    - run: npx run typecheck
+    - run: npm test
+      env:
+        BASE_URL: https://demo.playwright.dev/todomvc/
+        HEADLESS: 'true'
+    - uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: test-reports
+        path: |
+          reports/
+          test-results/
+          retention-days: 7
