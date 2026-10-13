@@ -2,7 +2,7 @@ pipeline {
     agent {
         // Puedes usar un contenedor que ya tenga Node y Playwright integrados
         docker {
-            image 'mcr.microsoft.com/playwright:v1.40.0-jammy'
+            image 'mcr.microsoft.com/playwright:v1.63.0-jammy'
             args '--ipc=host'
         }
     }
