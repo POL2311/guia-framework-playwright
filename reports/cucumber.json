@@ -1,263 +1,5 @@
 [
   {
-    "description": "    As a user\n    I want to register and complete pending Task",
-    "elements": [
-      {
-        "description": "",
-        "id": "todo-management;add-a-new-task",
-        "keyword": "Scenario",
-        "line": 7,
-        "name": "Add a new Task",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 8,
-            "name": "I am on the Todo application",
-            "result": {
-              "status": "passed",
-              "duration": 213000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 9,
-            "name": "I add the task \"Learn Playwright BDD\"",
-            "result": {
-              "status": "passed",
-              "duration": 83000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 10,
-            "name": "I should see the task \"Learn Playwright BDD\"",
-            "result": {
-              "status": "passed",
-              "duration": 35000000
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 215000000
-            }
-          }
-        ],
-        "tags": [
-          {
-            "name": "@todo",
-            "line": 1
-          },
-          {
-            "name": "@smoke",
-            "line": 6
-          }
-        ],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "todo-management;add-tasks-with-different-names",
-        "keyword": "Scenario Outline",
-        "line": 19,
-        "name": "Add tasks with different names",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 14,
-            "name": "I am on the Todo application",
-            "result": {
-              "status": "passed",
-              "duration": 199000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 15,
-            "name": "I add the task \"Learn TypeScript\"",
-            "result": {
-              "status": "passed",
-              "duration": 84000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 16,
-            "name": "I should see the task \"Learn TypeScript\"",
-            "result": {
-              "status": "passed",
-              "duration": 149000000
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 112000000
-            }
-          }
-        ],
-        "tags": [
-          {
-            "name": "@todo",
-            "line": 1
-          },
-          {
-            "name": "@smoke",
-            "line": 12
-          }
-        ],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "todo-management;agregar-dos-tareas-y-verificar-el-total-de-filas",
-        "keyword": "Scenario",
-        "line": 23,
-        "name": "Agregar dos tareas y verificar el total de filas",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 24,
-            "name": "I am on the Todo application",
-            "result": {
-              "status": "passed",
-              "duration": 149000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 25,
-            "name": "I add the task \"Comprar pan\"",
-            "result": {
-              "status": "passed",
-              "duration": 31000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 26,
-            "name": "I add the task \"Estudiar Playwright\"",
-            "result": {
-              "status": "passed",
-              "duration": 7000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 27,
-            "name": "I should see 2 tasks in the list",
-            "result": {
-              "status": "passed",
-              "duration": 6000000
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 58000000
-            }
-          }
-        ],
-        "tags": [
-          {
-            "name": "@todo",
-            "line": 1
-          },
-          {
-            "name": "@smoke",
-            "line": 22
-          }
-        ],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "todo-management;add-tasks-with-different-names",
-        "keyword": "Scenario Outline",
-        "line": 20,
-        "name": "Add tasks with different names",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 14,
-            "name": "I am on the Todo application",
-            "result": {
-              "status": "passed",
-              "duration": 402000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 15,
-            "name": "I add the task \"Review selectors\"",
-            "result": {
-              "status": "passed",
-              "duration": 31000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 16,
-            "name": "I should see the task \"Review selectors\"",
-            "result": {
-              "status": "passed",
-              "duration": 31000000
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 73000000
-            }
-          }
-        ],
-        "tags": [
-          {
-            "name": "@todo",
-            "line": 1
-          },
-          {
-            "name": "@smoke",
-            "line": 12
-          }
-        ],
-        "type": "scenario"
-      }
-    ],
-    "id": "chromium-›-todo-management",
-    "line": 2,
-    "keyword": "Feature",
-    "name": "todo management",
-    "tags": [
-      {
-        "name": "@todo",
-        "line": 1
-      }
-    ],
-    "uri": "features/todo.feature"
-  },
-  {
     "description": "",
     "elements": [
       {
@@ -274,7 +16,7 @@
             "name": "I navigate to the application login page",
             "result": {
               "status": "passed",
-              "duration": 253000000
+              "duration": 397000000
             }
           },
           {
@@ -284,7 +26,7 @@
             "name": "I enter valid credentials and submit",
             "result": {
               "status": "passed",
-              "duration": 145000000
+              "duration": 157000000
             }
           },
           {
@@ -294,7 +36,7 @@
             "name": "I should see the product catalog page",
             "result": {
               "status": "passed",
-              "duration": 23000000
+              "duration": 7000000
             }
           },
           {
@@ -302,7 +44,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 133000000
+              "duration": 234000000
             }
           }
         ],
@@ -348,7 +90,7 @@
             "name": "I navigate to the application login page",
             "result": {
               "status": "passed",
-              "duration": 260000000
+              "duration": 398000000
             }
           },
           {
@@ -358,7 +100,7 @@
             "name": "I enter valid credentials and submit",
             "result": {
               "status": "passed",
-              "duration": 151000000
+              "duration": 133000000
             }
           },
           {
@@ -368,7 +110,7 @@
             "name": "I should see the product catalog page",
             "result": {
               "status": "passed",
-              "duration": 24000000
+              "duration": 28000000
             }
           },
           {
@@ -378,7 +120,7 @@
             "name": "I select an item and click on \"Add to Cart\"",
             "result": {
               "status": "passed",
-              "duration": 72000000
+              "duration": 168000000
             }
           },
           {
@@ -386,7 +128,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 120000000
+              "duration": 116000000
             }
           }
         ],
@@ -414,5 +156,331 @@
       }
     ],
     "uri": "features/product.feature"
+  },
+  {
+    "description": "    As a user\n    I want to register and complete pending Task",
+    "elements": [
+      {
+        "description": "",
+        "id": "todo-management;add-a-new-task",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Add a new Task",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I am on the Todo application",
+            "result": {
+              "status": "passed",
+              "duration": 712000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I add the task \"Learn Playwright BDD\"",
+            "result": {
+              "status": "passed",
+              "duration": 58000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "I should see the task \"Learn Playwright BDD\"",
+            "result": {
+              "status": "passed",
+              "duration": 35000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 136000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@todo",
+            "line": 1
+          },
+          {
+            "name": "@smoke",
+            "line": 6
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "todo-management;add-tasks-with-different-names",
+        "keyword": "Scenario Outline",
+        "line": 19,
+        "name": "Add tasks with different names",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "I am on the Todo application",
+            "result": {
+              "status": "passed",
+              "duration": 710000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I add the task \"Learn TypeScript\"",
+            "result": {
+              "status": "passed",
+              "duration": 61000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "I should see the task \"Learn TypeScript\"",
+            "result": {
+              "status": "passed",
+              "duration": 34000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 138000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@todo",
+            "line": 1
+          },
+          {
+            "name": "@smoke",
+            "line": 12
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "todo-management;agregar-dos-tareas-y-verificar-el-total-de-filas",
+        "keyword": "Scenario",
+        "line": 23,
+        "name": "Agregar dos tareas y verificar el total de filas",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 24,
+            "name": "I am on the Todo application",
+            "result": {
+              "status": "passed",
+              "duration": 173000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "I add the task \"Comprar pan\"",
+            "result": {
+              "status": "passed",
+              "duration": 40000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "I add the task \"Estudiar Playwright\"",
+            "result": {
+              "status": "passed",
+              "duration": 16000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 27,
+            "name": "I should see 2 tasks in the list",
+            "result": {
+              "status": "passed",
+              "duration": 6000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 73000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@todo",
+            "line": 1
+          },
+          {
+            "name": "@smoke",
+            "line": 22
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "todo-management;add-tasks-with-different-names",
+        "keyword": "Scenario Outline",
+        "line": 20,
+        "name": "Add tasks with different names",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "I am on the Todo application",
+            "result": {
+              "status": "passed",
+              "duration": 173000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I add the task \"Review selectors\"",
+            "result": {
+              "status": "passed",
+              "duration": 51000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "I should see the task \"Review selectors\"",
+            "result": {
+              "status": "passed",
+              "duration": 40000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 100000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@todo",
+            "line": 1
+          },
+          {
+            "name": "@smoke",
+            "line": 12
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "todo-management;complete-a-task",
+        "keyword": "Scenario",
+        "line": 30,
+        "name": "Complete a task",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 31,
+            "name": "I am on the Todo application",
+            "result": {
+              "status": "passed",
+              "duration": 158000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 32,
+            "name": "I add the task \"Review report\"",
+            "result": {
+              "status": "passed",
+              "duration": 42000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 33,
+            "name": "I complete the task \"Review report\"",
+            "result": {
+              "status": "passed",
+              "duration": 30000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 34,
+            "name": "the task \"Review report\" should be completed",
+            "result": {
+              "status": "passed",
+              "duration": 4000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 70000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@todo",
+            "line": 1
+          },
+          {
+            "name": "@regression",
+            "line": 29
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "chromium-›-todo-management",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "todo management",
+    "tags": [
+      {
+        "name": "@todo",
+        "line": 1
+      }
+    ],
+    "uri": "features/todo.feature"
   }
 ]
